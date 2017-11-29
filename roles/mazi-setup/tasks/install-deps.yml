@@ -15,7 +15,7 @@
     - libsqlite3-dev
     - ruby
     - ruby-dev
-    - libmysqlclient-dev
+    - default-libmysqlclient-dev
 
 - name: Install python dependencies
   pip:

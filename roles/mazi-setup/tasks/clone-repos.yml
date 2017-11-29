@@ -1,10 +1,16 @@
 ---
+- name: Create /root/back-end/ directory
+  file: path=/root/back-end/ state=directory
+
 - name: Clone MAZI back-end repository
   git:
     repo: 'https://github.com/mazi-project/back-end.git'
-    dest: /root/
+    dest: /root/back-end/
+
+- name: Create /root/portal/ directory
+  file: path=/root/portal/ state=directory
 
 - name: Clone MAZI portal repository
   git:
     repo: 'https://github.com/mazi-project/portal.git'
-    dest: /root/
+    dest: /root/portal/

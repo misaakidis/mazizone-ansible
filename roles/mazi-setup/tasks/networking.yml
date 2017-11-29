@@ -23,6 +23,9 @@
     src: ../files/etc-init/mazizone-portal.conf
     dest: /etc/init/mazizone-portal.conf
 
+- name: Create /var/www/html/ directory
+  file: path=/var/www/html/ state=directory
+
 - name: Copy www/html/index.html file
   copy:
     src: ../files/www-html/index.html
