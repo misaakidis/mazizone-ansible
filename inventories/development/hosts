@@ -1,0 +1,2 @@
+[mazi-pi]
+replace.with.rpi.ip     ansible_connection=ssh      ansible_user=pi

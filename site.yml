@@ -1,0 +1,6 @@
+---
+- hosts: mazi-pi
+  become: true
+  become_user: root
+  roles:
+    - mazi-back-end
