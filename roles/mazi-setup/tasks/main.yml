@@ -1,0 +1,6 @@
+---
+- include: update-raspbian.yml
+- include: install-deps.yml
+#- include: clone-repos.yml
+- include: networking.yml
+#- include: cleanup.yml

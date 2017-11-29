@@ -1,0 +1,10 @@
+---
+- name: Clone MAZI back-end repository
+  git:
+    repo: 'https://github.com/mazi-project/back-end.git'
+    dest: /root/
+
+- name: Clone MAZI portal repository
+  git:
+    repo: 'https://github.com/mazi-project/portal.git'
+    dest: /root/

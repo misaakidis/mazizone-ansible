@@ -3,4 +3,4 @@
   become: true
   become_user: root
   roles:
-    - mazi-back-end
+    - mazi-setup

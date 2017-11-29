@@ -1,0 +1,5 @@
+---
+- name: Upgrade raspbian apt packages
+  apt:
+    update_cache: yes
+    upgrade: dist

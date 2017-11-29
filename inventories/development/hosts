@@ -1,2 +1,6 @@
 [mazi-pi]
-replace.with.rpi.ip     ansible_connection=ssh      ansible_user=pi
+replace.with.rpi.ip
+
+[mazi-pi:vars]
+ansible_user=pi
+ansible_ssh_pass=raspberry

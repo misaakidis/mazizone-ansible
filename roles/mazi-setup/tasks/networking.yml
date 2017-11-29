@@ -1,0 +1,7 @@
+---
+- name: Update hostname
+  hostname:
+    name: mazizone
+
+#TODO cp /etc/ networking files
+#TODO resolvconf Google DNS servers

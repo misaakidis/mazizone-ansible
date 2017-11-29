@@ -1,0 +1,17 @@
+---
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+
+- name: Install package dependencies
+  apt: name={{item}} state=present
+  with_items:
+    - git
+    - python-pip
+    - sshpass
+    - jq
+
+- name: Install python dependencies
+  pip:
+    name: speedtest-cli
