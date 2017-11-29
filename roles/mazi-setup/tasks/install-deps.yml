@@ -11,7 +11,23 @@
     - python-pip
     - sshpass
     - jq
+    - build-essential
+    - libsqlite3-dev
+    - ruby
+    - ruby-dev
+    - libmysqlclient-dev
 
 - name: Install python dependencies
   pip:
     name: speedtest-cli
+
+- name: Install ruby gem dependencies
+  gem: name={{item}}
+  with_items:
+    - sinatra
+    - sequel
+    - sqlite3
+    - rake
+    - thin
+    - rubyzip
+    - mysql

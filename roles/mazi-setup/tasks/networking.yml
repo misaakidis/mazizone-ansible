@@ -3,5 +3,30 @@
   hostname:
     name: mazizone
 
+- name: Copy /etc/hosts file
+  copy:
+    src: ../files/hosts
+    dest: /etc/hosts
+
+- name: Copy /etc/network/interfaces file
+  copy:
+    src: ../files/network-interfaces
+    dest: /etc/network/interfaces
+
+- name: Copy wpa_supplicant.conf file
+  copy:
+    src: ../files/wpa_supplicant-wpa_supplicant.conf
+    dest: /etc/wpa_supplicant/wpa_supplicant.conf
+
+- name: Copy mazi portal init file
+  copy:
+    src: ../files/etc-init/mazizone-portal.conf
+    dest: /etc/init/mazizone-portal.conf
+
+- name: Copy www/html/index.html file
+  copy:
+    src: ../files/www-html/index.html
+    dest: /var/www/html/index.html
+
 #TODO cp /etc/ networking files
 #TODO resolvconf Google DNS servers

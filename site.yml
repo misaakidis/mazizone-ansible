@@ -4,3 +4,8 @@
   become_user: root
   roles:
     - mazi-setup
+  post_tasks:
+    - name: Rebooting server in a minute...
+      command: /sbin/shutdown -r 1
+      async: 0
+      poll: 0

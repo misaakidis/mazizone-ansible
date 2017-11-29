@@ -1,0 +1,10 @@
+---
+- name: Build the MAZI portal project
+  command: rake init
+  args:
+    chdir: /root/portal
+
+- name: Init the MAZI portal database
+  command: rake db:migrate
+  args:
+    chdir: /root/portal
