@@ -1,4 +1,12 @@
 ---
+- name: Create /etc/mazi directory
+  file: path=/etc/mazi/ state=directory
+
+- name: Copy MAZI conf directory
+  copy:
+    src: ../files/etc-mazi/
+    dest: /etc/mazi/
+
 - name: Build the MAZI portal project
   command: rake init
   args:

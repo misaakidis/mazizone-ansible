@@ -8,6 +8,11 @@
     src: ../files/hosts
     dest: /etc/hosts
 
+- name: Copy host.conf file
+  copy:
+    src: ../files/etc-host.conf
+    dest: /etc/host.conf
+
 - name: Copy /etc/network/interfaces file
   copy:
     src: ../files/network-interfaces
@@ -17,6 +22,19 @@
   copy:
     src: ../files/wpa_supplicant-wpa_supplicant.conf
     dest: /etc/wpa_supplicant/wpa_supplicant.conf
+
+- name: Create /etc/hostapd/ directory
+  file: path=/etc/hostapd/ state=directory
+
+- name: Copy MAZI conf directory
+  copy:
+    src: ../files/etc-hostapd/
+    dest: /etc/hostapd/
+
+- name: Copy dnsmasq.conf file
+  copy:
+    src: ../files/etc-dnsmasq.conf
+    dest: /etc/dnsmasq.conf
 
 - name: Copy mazi portal init file
   copy:

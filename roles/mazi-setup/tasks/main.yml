@@ -4,4 +4,5 @@
 - include: install-deps.yml
 - include: clone-repos.yml
 - include: setup-portal.yml
+- include: start-network.yml
 #- include: cleanup.yml

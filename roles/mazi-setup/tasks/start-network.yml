@@ -1,0 +1,5 @@
+---
+- name: Create mazizone wifi (mazi-wifi.sh)
+  command: sh ./mazi-wifi.sh
+  args:
+    chdir: /root/back-end
